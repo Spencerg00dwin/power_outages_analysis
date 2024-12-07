@@ -26,3 +26,28 @@ Here are the first few rows of my cleaned DataFrame:
   height="600"
   frameborder="0"
 ></iframe>
+
+<iframe
+  src="assets/plot_two.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+<iframe
+  src="assets/plot_three.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+<iframe
+  src="assets/plot_four.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+<iframe
+  src="assets/plot_five.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
