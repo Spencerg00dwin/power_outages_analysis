@@ -395,7 +395,7 @@ I trained the model only on features available at the time of prediction, such a
 
 
 # Baseline Model
-My model is a Random Forest Regressor that predicts power outage durations (in minutes) using two **nominal features**: `CAUSE.CATEGORY` and `CLIMATE.CATEGORY`, both encoded with **OneHotEncoder**. These features, representing the primary causes and climatic conditions of outages, were selected for their relevance to outage severity. The model achieved a baseline **MSE of `29,062,622.80`** and an **r^2 of `0.121`'**, indicating substantial prediction errors. While the model provides a foundation, its performance is limited by the small number of features, and further improvement is needed. Adding **quantitative features** like `ANOMALY.LEVEL` or `POPULATION` and tuning hyperparameters could enhance predictive accuracy and reduce error.
+My model is a Random Forest Regressor that predicts power outage durations (in minutes) using two **nominal features**: `CAUSE.CATEGORY` and `CLIMATE.CATEGORY`, both encoded with **OneHotEncoder**. These features, representing the primary causes and climatic conditions of outages, were selected for their relevance to outage severity. The model achieved a baseline **MSE of `53,884,406`** and an **r^2 of `0.121`'**, indicating substantial prediction errors. While the model provides a foundation, its performance is limited by the small number of features, and further improvement is needed. Adding **quantitative features** like `ANOMALY.LEVEL` or `POPULATION` and tuning hyperparameters could enhance predictive accuracy and reduce error.
 
 # Final Model
 ### Feature Selection and Justification
@@ -405,13 +405,13 @@ For my Final Model, I added two additional features: `ANOMALY.LEVEL` and `POPULA
 ### Model and Hyperparameter Selection
 
 I used a **Random Forest Regressor** for its robustness. The final hyperparameters were selected using **GridSearchCV** with 3-fold cross-validation. The best-performing hyperparameters were:
-- **`n_estimators`**: `500` (number of trees in the forest)
-- **`max_depth`**: `20` (maximum depth of each tree)
-- **`min_samples_split`**: `2` (minimum samples required to split an internal node)
+- **`n_estimators`**: `300` (number of trees in the forest)
+- **`max_depth`**: `10` (maximum depth of each tree)
+- **`min_samples_split`**: `5` (minimum samples required to split an internal node)
 - **`max_features`**: `'sqrt'` (number of features considered for splitting at each node)
 
 GridSearchCV systematically evaluated combinations of these hyperparameters, allowing the model to balance complexity and performance.
 
 ### Performance Improvement
 
-The Final Model achieved an **MSE of `24,543,210.98`** and an **r^2 of `0.132`**, a significant improvement over the Baseline Model’s **MSE of `29,062,622.80`**. This reduction additional quantitative  in error reflects the model’s enhanced ability to predict outage durations accurately by incorporating thefeatures and optimizing hyperparameters. The performance boost aligns with the importance of `ANOMALY.LEVEL` and `POPULATION` in capturing the underlying variability in the data. Overall, the Final Model has a higher predictive accuracy and generalizability compared to the baseline.
+The Final Model achieved an **MSE of `53,115,669`** and an **r^2 of `0.132`**, a significant improvement over the Baseline Model’s **MSE of `53,884,406`**. This reduction additional quantitative  in error reflects the model’s enhanced ability to predict outage durations accurately by incorporating thefeatures and optimizing hyperparameters. The performance boost aligns with the importance of `ANOMALY.LEVEL` and `POPULATION` in capturing the underlying variability in the data. Overall, the Final Model has a higher predictive accuracy and generalizability compared to the baseline.
