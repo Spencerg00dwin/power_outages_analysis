@@ -6,11 +6,13 @@
 
 
 # Introduction
-In this project, I analyzed a dataset of major power outages in the U.S. to predict outage duration (in minutes), making this a regression problem. The response variable, OUTAGE.DURATION, was chosen because it directly measures the impact of power outages and is critical for planning and mitigation efforts. The dataset spans January 2000 to July 2016 and includes 1,534 rows and 57 columns, capturing attributes such as outage causes, geographical regions, climate anomalies, and population data.
+In this project, I analyzed a dataset of major power outages in the U.S. to explore patterns, causes, and impacts of these events. The dataset spans January 2000 to July 2016 and includes key attributes such as outage durations, causes, geographical regions, climate anomalies, and population data.
 
-To evaluate my model, I used Mean Squared Error (MSE) as the metric, as it heavily penalizes large errors, which is important when predicting durations that could significantly deviate from observed values. I selected this metric over alternatives like Mean Absolute Error (MAE) because MSE emphasizes the importance of minimizing large deviations in predictions. My features include both categorical and numerical variables, such as climate region, cause category, El Niño/La Niña anomaly index (ONI), and population, which are all known at the time of prediction. My model excludes any data generated after the outage begins (e.g., restoration times) to ensure predictions are based only on pre-outage information. I started with a baseline Random Forest Regressor and improved it through hyperparameter tuning and feature engineering, focusing on creating a robust model for accurate predictions.
+At first, I focused on cleaning the dataset and conducting exploratory data analysis to identify trends and anomalies. I specifically looked at climatic trends as a relation to power outage durations and averages. Along with this, visualizations such as the average outage duration by cause category, provided insights into the most impactful outage causes.
 
-I focused on these columns for my model:
+My model predict's outage durations based on both categorical and numerical features, such as climate region, cause category, El Niño/La Niña (ONI) anomoly index, and population. I started with a baseline Random Forest Regressor and later refined the model using hyperparameter tuning and feature selection techniques. I used evaluation metrics such as Mean Squared Error (MSE) to measure the performance of my model.
+
+The original raw DataFrame contains 1534 rows, corresponding to 1534 outages, and 57 columns. I focused on these columns:
 <table class="table table-striped table-bordered">
   <thead>
     <tr>
