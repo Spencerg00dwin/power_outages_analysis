@@ -25,10 +25,3 @@ Here are the first few rows of my cleaned DataFrame:
 | 3   | 2010 | 10.0  | Minnesota  | MN          | MRO         | East North Central | -1.5          | cold             | severe weather     | heavy wind            | 3000.0          | NaN            | 5310903    | 2010-10-26 20:00:00 | 2010-10-28 22:00:00 |
 | 4   | 2012 | 6.0   | Minnesota  | MN          | MRO         | East North Central | -0.1          | normal           | severe weather     | thunderstorm          | 2550.0          | NaN            | 5380443    | 2012-06-19 04:30:00 | 2012-06-20 23:00:00 |
 | 5   | 2015 | 7.0   | Minnesota  | MN          | MRO         | East North Central | 1.2           | warm             | severe weather     | NaN                   | 1740.0          | 250.0          | 5489594    | 2015-07-18 02:00:00 | 2015-07-19 07:00:00 |
-
-<iframe
-  src="assets/average_outage_duration_by_cause.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
